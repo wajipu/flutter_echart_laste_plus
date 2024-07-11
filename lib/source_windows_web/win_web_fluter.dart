@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import "package:webview_universal/webview_universal.dart";
 
+
 ///用于处理win及web端Echarts图像
 class WinWebFlutterEcharts extends StatefulWidget {
   var option; ///要加载的Echarts
@@ -21,11 +22,10 @@ class _WinWebFlutterEchartsState extends State<WinWebFlutterEcharts> {
   @override
   void initState() {
     // TODO: implement initState
+    webViewController.is_init = false;
     webViewController.init(
       context: context,
       setState: setState,
-      // https://echarts.apache.org/examples/zh/editor.html?c=pie-simple
-      // uri: Uri.parse("https://echarts.apache.org/zh/index.html"),
       uri: Uri.dataFromString(
           setHTML(widget.option),
           mimeType: 'text/html',
