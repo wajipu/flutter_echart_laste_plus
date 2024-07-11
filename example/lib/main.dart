@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_echart_laste_plus/echart/echarts_init.dart';
 
 Future main() async {
@@ -43,8 +44,10 @@ class _MyDemoState extends State<MyDemo> {
       body: Column(
         children: [
           Text("ec图适配"),
-          Expanded(child: Center(child: EchartsInit(option: '''
-{
+          Container(
+            width: 500,
+            height: 520,
+            child:  Center(child: EchartsInit(option: '''{
                       legend: {
                         data: ['Visit', 'Market', 'Ad', 'Video', 'Search']
                       },
@@ -93,8 +96,89 @@ class _MyDemoState extends State<MyDemo> {
                           data: [820, 832, 901, 934, 1290, 1330, 1320]
                         }
                       ]
-                    }
-'''))),
+                    }'''))),
+          Expanded(
+            child: Center(child: EchartsInit(option: '''
+               {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      // Use axis to trigger tooltip
+      type: 'shadow' // 'shadow' as default; can also be 'line' or 'shadow'
+    }
+  },
+  legend: {},
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+     type: 'category',
+     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value',
+     max: 100,
+    axisLabel: {
+      formatter: '{value}%'
+    }
+  },
+  series: [
+    {
+      name: 'Direct',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [50, 60, 50, 20, 3, 3, 22]
+    },
+    {
+      name: 'Mail Ad',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [5, 9, 7, 6, 88, 77, 11]
+    },
+    {
+      name: 'Affiliate Ad',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [90, 10, 30, 35, 1, 8, 20]
+    },
+    {
+      name: 'Video Ad',
+      type: 'bar',
+      stack: 'total',
+      label: {
+        show: true
+      },
+      emphasis: {
+        focus: 'series'
+      },
+      data: [10, 20, 30, 40, 70, 60, 10]
+    },
+   
+  ]
+};
+''')),
+          ),
         ],
       ),
     );

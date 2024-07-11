@@ -50,12 +50,12 @@ String setHTML(var option) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gauge Chart Example</title>
   <!-- 引入 ECharts -->
-  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script>
   <style>
     /* 样式可以根据需要进行调整 */
     #chart {
-      width: 400px;
-      height: 400px;
+      width: 100%;
+      height: 100%;
       margin: 0 auto;
     }
   </style>
