@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+<div id="chart" style="width: 100%; height: 100%;"></div>
+<script type="text/javascript">
+    // 在这里编写你的 ECharts 初始化和配置代码
+    var chartDom = document.getElementById('chart');
+    var myChart = echarts.init(chartDom);
+    var option;
+    // prettier-ignore
+    var hours = ['0:00-6:00', '6:00-12:00', '12:00-18:00', '18:00-24:00',];
+    // prettier-ignore
+    var days = [   '周一', '周二', '周三','周四','周五','周六',];
+    // prettier-ignore [0,2,9] 0=>行 2=>列9=>深度
+    var data = [[0,2,9] ,[1,0,1],[3,3,5]]  .map(function (item) { return [item[1], item[0], item[2] || '-'];});
+    // 在这里设置 ECharts 的 option
+    option = {
+      // ECharts 配置项
+      tooltip: {
+      position: 'top'
+  },
+  grid: {
+    height: '50%',
+    top: '10%'
+  },
+  xAxis: {
+          type: 'category',
+          data: hours,
+          splitArea: {
+            show: true
+          },
+          axisLabel: {
+            position: 'top'  // 新增这一行，将标签位置设置在顶部
+          }
+        },
+        yAxis: {
+          type: 'category',
+          data: days,
+          splitArea: {
+            show: true
+          }
+        },
+        visualMap: {
+          min: 0,
+          max: 10,
+          calculable: true,
+          orient: 'horizontal',
+          left: 'center',
+          bottom: '15%'
+        },
+        series: [
+          {
+            name: 'Punch Card',
+            type: 'heatmap',
+            data: data,
+
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            }
+          }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+</body>
+</html>
