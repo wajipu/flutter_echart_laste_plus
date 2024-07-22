@@ -21,7 +21,7 @@ class _EchartsInitState extends State<EchartsInit> {
     TargetPlatform platform = defaultTargetPlatform;
     if(platform == TargetPlatform.android || platform == TargetPlatform.iOS){
       /// android or ios
-      return Echarts(option: widget.option);
+      return Echarts(option: widget.option,reloadAfterInit: true);
     }else{
       ///web or windows
       return WinWebFlutterEcharts(option: widget.option);

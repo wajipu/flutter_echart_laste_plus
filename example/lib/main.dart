@@ -5,9 +5,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_echart_laste_plus/echart/echarts_init.dart';
+import 'package:window_manager/window_manager.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // await windowManager.ensureInitialized();
   runApp(const MyApp());
 }
 

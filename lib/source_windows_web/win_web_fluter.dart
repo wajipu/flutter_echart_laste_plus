@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
-import "package:webview_universal/webview_universal.dart";
-
-
+import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_win_floating/webview_win_floating.dart';
 ///用于处理win及web端Echarts图像
 class WinWebFlutterEcharts extends StatefulWidget {
   var option; ///要加载的Echarts
@@ -16,32 +16,45 @@ class WinWebFlutterEcharts extends StatefulWidget {
 }
 
 class _WinWebFlutterEchartsState extends State<WinWebFlutterEcharts> {
-
-  WebViewController webViewController = WebViewController();
+  final controller = WebViewController();
 
   @override
   void initState() {
     // TODO: implement initState
-    webViewController.is_init = false;
-    webViewController.init(
-      context: context,
-      setState: setState,
-      uri: Uri.dataFromString(
-          setHTML(widget.option),
-          mimeType: 'text/html',
-          encoding: Encoding.getByName('utf-8')
-      ),
-    );
+    controller.loadHtmlString(htmlContent);
+    // webViewController.init(
+    //   context: context,
+    //   setState: setState,
+    //   uri: Uri.dataFromString(
+    //       setHTML(widget.option),
+    //       mimeType: 'text/html',
+    //       encoding: Encoding.getByName('utf-8')
+    //   ),
+    // );
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
-    return WebView(
-      controller: webViewController,
+    // return WebView(
+    //   controller: webViewController,
+    // );
+    return WebViewWidget(
+         controller: controller,
     );
   }
 }
-
+var htmlContent = '''
+<html>
+<body>
+<script>
+function callByDart(int value) {
+    console.log("callByDart: " + value);
+}
+myChannelName.postMessage("This message is from javascript");
+</script>
+</body>
+</html>
+''';
 String setHTML(var option) {
   return ('''
 <html lang="en">
