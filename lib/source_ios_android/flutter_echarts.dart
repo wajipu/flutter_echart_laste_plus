@@ -64,7 +64,7 @@ class _EchartsState extends State<Echarts> {
     _currentOption = widget.option;
 
     _controller = WebViewController()
-      ..setBackgroundColor(Color(0x00000000))
+      ..setBackgroundColor(const Color(0x00000000))
       ..loadHtmlString(utf8.fuse(base64).decode(htmlBase64))
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
@@ -84,7 +84,7 @@ class _EchartsState extends State<Echarts> {
       });
 
     if (widget.reloadAfterInit) {
-      new Future.delayed(const Duration(milliseconds: 100), () {
+      Future.delayed(const Duration(milliseconds: 100), () {
         _controller?.reload();
       });
     }

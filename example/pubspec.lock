@@ -352,10 +352,10 @@ packages:
     dependency: transitive
     description:
       name: webview_win_floating
-      sha256: fe2d16f7b895fccb326161ff97b7560c85ed1e7ac289ff2fd98b6c6000398823
+      sha256: de9e86f1e43b6a254fbd62f62c9af330a015372b078c14c2a9a6e4c9ffb5cc6c
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.2.5"
+    version: "2.2.7"
   webview_windows:
     dependency: "direct main"
     description:
