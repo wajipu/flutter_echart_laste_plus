@@ -93,7 +93,7 @@ class _EchartsState extends State<Echarts> {
   void init() async {
     final extensionsStr = this.widget.extensions.length > 0 ? this.widget.extensions.reduce((value, element) => value + '\n' + element) : '';
     final themeStr = this.widget.theme != null ? '\'${this.widget.theme}\'' : 'null';
-    await _controller?.runJavaScript('''
+    Object? status = await _controller?.runJavaScriptReturningResult('''
       $echartsScript
       $extensionsStr
       var chart = echarts.init(document.getElementById('chart'), $themeStr);
@@ -102,6 +102,13 @@ class _EchartsState extends State<Echarts> {
     ''');
     if (widget.onLoad != null) {
       widget.onLoad!(_controller!);
+    }
+    ///如果异常 让重新渲染
+    print("当前echarts初始化状态----->$status");
+    if(status==null || status==false){
+      Future.delayed(const Duration(milliseconds: 100), () {
+        _controller?.reload();
+      });
     }
   }
 

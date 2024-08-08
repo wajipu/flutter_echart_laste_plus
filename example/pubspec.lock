@@ -69,14 +69,6 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  flutter_echarts:
-    dependency: transitive
-    description:
-      name: flutter_echarts
-      sha256: "1102f0f82d3ca6025cf700d345ecc8c15c8bab38f5315dd2dcb67ecdb3fe3d91"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.5.0"
   flutter_inappwebview:
     dependency: transitive
     description:
