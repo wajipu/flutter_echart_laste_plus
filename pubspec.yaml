@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_echarts: ^2.1.0
+  flutter_echarts: ^2.0.0
   flutter_inappwebview: ^6.0.0
 #  webview_flutter: ^4.8.0
   webview_win_floating: ^2.2.5
