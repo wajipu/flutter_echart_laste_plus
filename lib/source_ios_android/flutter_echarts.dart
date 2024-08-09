@@ -97,14 +97,14 @@ class _EchartsState extends State<Echarts> {
     final themeStr = this.widget.theme != null ? '\'${this.widget.theme}\'' : 'null';
      try {
        await _controller?.runJavaScript('''
-      $echartsScript
+        $echartsScript
         $extensionsStr
         var chart = echarts.init(document.getElementById('chart'), $themeStr);
         ${widget.extraScript}
         chart.setOption($_currentOption, true);
-           ''');
+        ''');
      } on Exception catch (e) {
-       print("");
+       print("出现异常----->$e");
        // TODO
      }
     if (widget.onLoad != null) {
