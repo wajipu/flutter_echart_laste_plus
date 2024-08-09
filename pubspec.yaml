@@ -11,7 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_inappwebview: ^6.0.0
-  webview_flutter: ^4.2.0
+#  webview_flutter: ^4.2.0
+  webview_flutter_plus: ^0.4.6
   webview_win_floating: ^2.2.5
 #  webview_universal: ^0.0.5
 

@@ -215,6 +215,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.11.0"
+  mime:
+    dependency: transitive
+    description:
+      name: mime
+      sha256: "2e123074287cc9fd6c09de8336dae606d1ddb88d9ac47358826db698c176a1f2"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.5"
   path:
     dependency: transitive
     description:
@@ -332,6 +340,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.10.0"
+  webview_flutter_plus:
+    dependency: transitive
+    description:
+      name: webview_flutter_plus
+      sha256: "37e819bfb3f084d0e9b022627dd894b46792896b32d6712b574d1102b599ea79"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.4.6"
   webview_flutter_wkwebview:
     dependency: transitive
     description:
@@ -344,10 +360,10 @@ packages:
     dependency: transitive
     description:
       name: webview_win_floating
-      sha256: de9e86f1e43b6a254fbd62f62c9af330a015372b078c14c2a9a6e4c9ffb5cc6c
+      sha256: "00a2d0b4b72d8c3a41e392a9179c72fe99de31f9be5d0fdfdfe28efff3eecc81"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.2.7"
+    version: "2.2.8"
   webview_windows:
     dependency: "direct main"
     description:
