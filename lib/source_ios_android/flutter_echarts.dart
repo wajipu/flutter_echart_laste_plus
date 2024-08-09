@@ -86,7 +86,7 @@ class _EchartsState extends State<Echarts> {
       });
 
     if (widget.reloadAfterInit) {
-      Future.delayed(const Duration(milliseconds: 100), () {
+      Future.delayed(const Duration(milliseconds: 1000), () {
         _controller?.reload();
       });
     }
