@@ -30,5 +30,5 @@ class _WinFlutterEchartsState extends State<WinFlutterEcharts> {
   }
 }
 String setHTML(var option) {
-  return ('''<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script><style>#chart{width:100%;height:100%;margin:0 auto;}</style></head><body><div id="chart"></div><script>var myChart=echarts.init(document.getElementById('chart'));var option=$option;myChart.setOption(option);</script></body></html>''');
+  return ('''<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, target-densitydpi=device-dpi" /><script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script><style type="text/css">body,html,#chart{height: 100%;width: 100%;margin: 0px;}div {-webkit-tap-highlight-color:rgba(255,255,255,0);}</style></head><body><div id="chart"></div><script>var myChart=echarts.init(document.getElementById('chart'));var option=$option;myChart.setOption(option);</script></body></html>''');
 }
