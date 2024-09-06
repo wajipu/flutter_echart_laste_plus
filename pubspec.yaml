@@ -2,7 +2,7 @@ name: flutter_echart_laste_plus
 description: "A new Flutter project."
 version: 0.0.1
 author: JiPu <wajipu7979@gmail.com>
-homepage: https://github.com/wajipu/flutter_echart_laste_plus.git
+homepage: https://gitee.com/wajipu/flutter_echart_laste_plus/tree/main/
 
 environment:
   sdk: '>=3.3.4 <4.0.0'
