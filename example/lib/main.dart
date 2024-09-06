@@ -49,7 +49,7 @@ class _MyDemoState extends State<MyDemo> {
           Container(
             width: 500,
             height: 520,
-            child:  Center(child: EchartsInit(option: '''{
+            child: Center(child: EchartsInit(option: '''{
                       legend: {
                         data: ['Visit', 'Market', 'Ad', 'Video', 'Search']
                       },
@@ -176,7 +176,7 @@ class _MyDemoState extends State<MyDemo> {
       },
       data: [10, 20, 30, 40, 70, 60, 10]
     },
-   
+
   ]
 };
 ''')),
