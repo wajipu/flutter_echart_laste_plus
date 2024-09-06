@@ -50,6 +50,7 @@ class _MyDemoState extends State<MyDemo> {
             width: 500,
             height: 520,
             child: Center(child: EchartsInit(option: '''{
+                      backgroundColor: 'transparent', // 设置背景为透明
                       legend: {
                         data: ['Visit', 'Market', 'Ad', 'Video', 'Search']
                       },
@@ -118,7 +119,7 @@ class _MyDemoState extends State<MyDemo> {
   },
   xAxis: {
      type: 'category',
-     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+     data: ['你哈', '才时', '了大量流动', '咯咯', '请求', '各个', '啊啊']
   },
   yAxis: {
     type: 'value',
