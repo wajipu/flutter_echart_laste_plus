@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../source_ios_android/flutter_echarts.dart';
 import '../source_windows_web/web_flutter.dart';
 import '../source_windows_web/win_fluter.dart';
+import '../source_windows_web/win_flutter_1.dart';
 class EchartsInit extends StatefulWidget {
    EchartsInit({
     super.key,
@@ -24,7 +25,7 @@ class _EchartsInitState extends State<EchartsInit> {
     }else if(GetPlatform.isWeb){
       return WebFlutterEcharts(option: widget.option);
     }else{
-      return WinFlutterEcharts(option: widget.option);
+      return EchartsWin(option: widget.option);
     }
   }
 }

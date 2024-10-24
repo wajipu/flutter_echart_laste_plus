@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_win_floating/webview_win_floating.dart';
 class WinFlutterEcharts extends StatefulWidget {
   var option;
@@ -19,9 +20,7 @@ class _WinFlutterEchartsState extends State<WinFlutterEcharts> {
   @override
   void initState() {
     // TODO: implement initState
-    if(GetPlatform.isWindows){
-      winController.loadHtmlString(setHTML(widget.option));
-    }
+    winController.loadHtmlString(setHTML(widget.option));
     super.initState();
   }
   @override

@@ -15,7 +15,10 @@ dependencies:
   get: ^4.6.6
   webview_flutter: ^4.2.0
   webview_flutter_web: ^0.2.3+2
-  webview_win_floating: ^2.2.5
+  webview_win_floating:
+    git:
+      url: git@codeup.aliyun.com:63043643cb9d006848793bd7/infrastructure/webview_win_floating.git
+      ref: master
 
 
 dev_dependencies:
@@ -30,8 +33,7 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  assets:
-     - assets/js/echarts.min.js
+#  assets:
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
